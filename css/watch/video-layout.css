@@ -1,0 +1,159 @@
+.video-layout-container {
+    display: flex;
+}
+
+.video-view {
+    flex: 1;
+    margin-left: 80px;
+}
+
+.video-player {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.video-info {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.video-title {
+    flex: 1;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(235, 235, 235);
+}
+
+.video-date {
+    margin-left: 15px;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(235, 235, 235);
+}
+
+.more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    transition: background-color 0.2s;
+}
+
+.more-button:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.more-icon {
+    filter: invert(1);
+    height: 20px;
+    cursor: pointer;
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.creator-pfp {
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+.video-creator {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+.video-description {
+    padding: 15px 15px;
+    min-height: 36px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+}
+
+.video-description-text {
+    font-size: 14px;
+    color: rgb(163, 163, 163);
+    line-height: 18px;
+}
+
+.video-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 525px;
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+
+.video-preview-container {
+    display: flex;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.video-preview-container:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.video-preview-container:hover .video-preview-thumbnail {
+    opacity: 0.8;
+}
+
+.video-preview-thumbnail {
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.video-preview-info {
+    flex: 1;
+    cursor: pointer;
+}
+
+.video-preview-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(235, 235, 235);
+    margin-top: 3px;
+    margin-bottom: 6px;
+}
+
+.video-preview-creator {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    margin-bottom: 4px;
+    transition: color 0.2s;
+}
+
+.video-preview-creator:hover {
+    color: rgb(235, 235, 235);
+}
+
+.video-preview-date {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+}
+
+.preview-dots-icon {
+    height: 20px;
+    margin-top: 6px;
+    margin-right: 5px;
+    cursor: pointer;
+}

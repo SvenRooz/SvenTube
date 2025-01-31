@@ -1,0 +1,84 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding: 15px 10px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 7px;
+    transition: background-color 0.2s;
+}
+
+.video-container:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.video-preview {
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.video-title-container {
+    display: flex;
+    margin-top: 15px;
+}
+
+.video-creator-pfp {
+    height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.video-text-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 11px;
+}
+
+.video-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(235, 235, 235);
+    margin: 0;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.video-creator {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    margin: 0;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.video-creator:hover {
+    color: rgb(235, 235, 235);
+}
+
+.video-date {
+    font-size: 14px;
+    color: rgb(201, 201, 201);
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.video-date:hover {
+    color: rgb(235, 235, 235);
+}
+
+.video-dots-icon {
+    height: 20px;
+    cursor: pointer;
+    padding-left: 3px;
+    padding-bottom: 3px;
+}

@@ -1,0 +1,22 @@
+body {
+    /* Centers content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 75px;
+    bottom: 0;
+    left: 250px;
+    right: 0;
+    overflow: hidden;
+    position: absolute; 
+
+    margin: 0;
+    font-family: Roboto, Arial;
+    background-color: rgb(29, 29, 29);
+    border-top: 1px solid rgb(50, 50, 50);
+}
+
+p {
+    font-family: Roboto, Arial;
+    margin: 0;
+}

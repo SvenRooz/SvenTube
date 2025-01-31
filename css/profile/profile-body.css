@@ -1,0 +1,75 @@
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    max-width: 840px;
+    margin: 50px;
+    padding: 60px 70px;
+
+    background-color: rgb(39, 39, 39);
+    border-radius: 15px;
+}
+
+.profile-pfp {
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+}
+
+.profile-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(235, 235, 235);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.profile-info-title {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(235, 235, 235);
+}
+
+.profile-info-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    padding: 8px 0px;
+    border-top: 1px solid rgb(50, 50, 50);
+}
+
+.profile-info-attribute {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(235, 235, 235);
+}
+
+.profile-info-text, .profile-description-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(201, 201, 201);
+}
+
+.profile-description-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    padding: 8px 0px;
+    border-top: 1px solid rgb(50, 50, 50);
+    gap: 8px;
+}

@@ -1,0 +1,86 @@
+.register-window {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px 30px 50px;
+    margin: 50px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 14px;
+}
+
+.sventube-logo {
+    width: 200px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.register-text {
+    font-size: 30px;
+    color: rgb(235, 235, 235);
+    margin-bottom: 30px;
+}
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-username, .input-email, .input-password, .input-password-again, .input-birthdate {
+    height: 36px;
+    min-width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(235, 235, 235);
+    font-family: Roboto, Arial;
+    font-size: 17px;
+    border: none;
+    border-radius: 18px;
+    transition: opacity 0.2s;
+}
+
+.input-username:hover, .input-email:hover, .input-password:hover, .input-password-again:hover, .input-birthdate:hover {
+    opacity: 0.9;
+}
+
+.input-username:focus, .input-email:focus, .input-password:focus, .input-password-again:focus, .input-birthdate:focus {
+    outline: none;
+}
+
+.input-username::placeholder, .input-email::placeholder, .input-password::placeholder, .input-password-again::placeholder, .input-birthdate::placeholder {
+    color: rgb(24, 24, 24);
+}
+
+.register-button {
+    height: 36px;
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(24, 24, 24);
+    background-color: rgb(235, 235, 235);
+    transition: color 0.2s, background-color 0.2s; 
+}
+
+.register-button:hover {
+    background-color: rgb(29, 29, 29);
+    color: rgb(235, 235, 235);
+}
+
+.signin-text {
+    font-size: 15px;
+    color: rgb(235, 235, 235);
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.signin-text:hover {
+    text-decoration: underline;
+}
+
