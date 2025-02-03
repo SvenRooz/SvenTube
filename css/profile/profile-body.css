@@ -1,75 +1,64 @@
-/* .profile-content {
+.profile-header {
+    z-index: 50;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 75px;
+    margin-left: 250px;
+    background-color: rgb(29, 29, 29);
 
-    max-width: 840px;
-    margin: 50px;
-    padding: 60px 70px;
-
-    background-color: rgb(39, 39, 39);
-    border-radius: 15px;
-}
-
-.profile-pfp {
-    width: 200px;
-    border-radius: 100px;
-    margin-bottom: 18px;
-}
-
-.profile-name {
-    font-size: 30px;
-    font-weight: 600;
     color: rgb(235, 235, 235);
+    font-size: 32px;
+    font-weight: 400;
+    padding: 25px 50px 20px;
+    border-top: 1px solid rgb(50, 50, 50);
+    border-bottom: 1px solid rgb(50, 50, 50);
 }
 
-.profile-info {
+.profile-info-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 60px;
-}
-
-.profile-info-title {
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 8px;
-    font-size: 24px;
-    font-weight: 600;
-    color: rgb(235, 235, 235);
 }
 
 .profile-info-row {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 700px;
-    padding: 8px 0px;
-    border-top: 1px solid rgb(50, 50, 50);
+    flex: 1;
+    padding: 15px 30px;
+    gap: 30px;
+    border-bottom: 1px solid rgb(50, 50, 50);
 }
 
-.profile-info-attribute {
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(235, 235, 235);
+.profile-info-pfp-container {
+    padding: 15px 75px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
 }
 
-.profile-info-text, .profile-description-text {
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(201, 201, 201);
+.profile-info-pfp {
+    height: 150px;
+    border-radius: 100px;
 }
 
-.profile-description-container {
+.profile-row-right {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 700px;
-    padding: 8px 0px;
-    border-top: 1px solid rgb(50, 50, 50);
-    gap: 8px;
-} */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-info-explanation {
+    color: rgb(235, 235, 235);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.profile-info-extra-explanation {
+    color: rgb(201, 201, 201);
+    font-size: 15px;
+}
+
+.profile-info-buttons {
+    display: flex;
+}
