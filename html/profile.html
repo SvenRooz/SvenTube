@@ -5,13 +5,14 @@
     
         <link rel="icon" type="image/png" href="../favicon.png">
 
-        <link rel="stylesheet" href="../css/profile/general.css">
-        <link rel="stylesheet" href="../css/profile/profile-body.css">
-    
         <link rel="stylesheet" href="../css/utils/sidebar.css">
         <link rel="stylesheet" href="../css/utils/scrollbar.css">
         <link rel="stylesheet" href="../css/utils/header.css">
         <link rel="stylesheet" href="../css/utils/buttons.css">
+        <link rel="stylesheet" href="../css/utils/inputs.css"> 
+
+        <link rel="stylesheet" href="../css/profile/general.css">
+        <link rel="stylesheet" href="../css/profile/profile-body.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +28,7 @@
 			</div>
 
 			<div class="header-middle">
-				<input class="searchbar" placeholder="Search for my videos">
+				<input class="searchbar" placeholder="Search for videos on my channel">
 				<button class="search-button">
 					<img src="../icons/homepage/search-icon.png" class="search-button-icon">
 				</button>
@@ -87,14 +88,65 @@
 
                 <div class="profile-row-right">
                     <p class="profile-info-explanation"> Profile picture </p>
-                    <p class="profile-info-extra-explanation"> Profile picture info </p>
+                    <p class="profile-info-extra-explanation">
+                        Your profile picture is displayed whenever someone visits your channel or
+                        when you post a video.
+                    </p>
 
                     <div class="profile-info-buttons">
-                        <button class="profile-info-edit-button"> Edit </button>
-                        <button class="profile-info-delete-button"> Delete </button>
+                        <button class="profile-info-edit-button button-white-to-black"> Edit </button>
+                        <button class="profile-info-delete-button button-white-to-black"> Delete </button>
                     </div>
                 </div>
             </div>
+
+            <div class="profile-info-row">
+                <div class="profile-input-container">
+                    <input value="DexyBentai" class="profile-name-input rectangle-input-field">
+                </div>
+
+                <div class="profile-row-right">
+                    <p class="profile-info-explanation"> Username </p>
+                    <p class="profile-info-extra-explanation">
+                        Choose a name that suits you or your content.
+                    </p>
+                </div>
+            </div>
+
+            <div class="profile-info-row">
+                <div class="profile-input-container">
+                    <input value="He/Him" placeholder="Example: He/Him, She/Her etc." class="profile-gender-input rectangle-input-field">
+                </div>
+
+                <div class="profile-row-right">
+                    <p class="profile-info-explanation"> Pronouns </p>
+                    <p class="profile-info-extra-explanation">
+                        Indicate how others should refer to you. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="profile-info-row">
+                <div class="profile-input-container">
+                    <select class="profile-location-input rectangle-input-field" name="cars">
+                        <option value="none"> Not set </option>
+                        <option value="netherlands"> Netherlands </option>
+                      </select>
+                </div>
+
+                <div class="profile-row-right">
+                    <p class="profile-info-explanation"> Location </p>
+                    <p class="profile-info-extra-explanation">
+                        Share your nationality with others. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="profile-info-description-row profile-info-row">
+                <p class="profile-info-explanation"> About me: </p>
+                <textarea placeholder="No description set" class="profile-info-description-input rectangle-input-field">Hi, my name is DexyBentai and I am the creator of SvenTube!</textarea>
+            </div>
+
         </div>
 
     </body>

@@ -1,0 +1,13 @@
+.rectangle-input-field {
+    padding: 9px 9px;
+
+    font-family: Roboto, Arial;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 4px;
+}
+
+.rectangle-input-field:focus {
+    outline: none;
+}

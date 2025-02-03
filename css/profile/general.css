@@ -3,10 +3,9 @@ body {
     padding-top: 160px;
     padding-left: 250px;
     padding-bottom: 10px;
+    
     font-family: Roboto, Arial;
     background-color: rgb(29, 29, 29);
-
-    height: 5000px;
 }
 
 p {
