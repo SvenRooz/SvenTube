@@ -19,6 +19,7 @@
     color: rgb(235, 235, 235);
     font-size: 32px;
     font-weight: 400;
+    margin-right: 50px;
 }
 
 .profile-header-buttons {
@@ -111,6 +112,6 @@
 }
 
 .profile-delete-account-button:hover {
-    background-color: rgb(221, 0, 0);
-    /* color: white; */
+    background-color: rgb(255, 62, 62);
+    color: rgb(235, 235, 235);
 }
