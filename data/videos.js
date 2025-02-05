@@ -1,3 +1,5 @@
+import { users } from "./users.js";
+
 class Video {
   videoId;
   videoPath;
@@ -11,6 +13,18 @@ class Video {
   constructor(videoObject) {
     Object.assign(this, videoObject);
   }
+
+	getVideoCreator() {
+		let matchingUser;
+
+		users.usersList.forEach(user => {
+			if (user.userId === this.creatorId) {
+				matchingUser = user;
+			}
+		});
+
+		return matchingUser;
+	}
 }
 
 class Videos {
@@ -22,8 +36,8 @@ class Videos {
     for (let i = 1; i <= 5; i++) {
       const videoObject = {
         videoId: i,
-        videoPath: `../videos/Clip${i}.mp4`,
-        thumbnailPath: `../images/video-preview/Clip${i}.png`,
+        videoPath: `videos/Clip${i}.mp4`,
+        thumbnailPath: `images/video-preview/Clip${i}.png`,
         title: `Video Title ${i}`,
         description: 'No description',
         creatorId: 1,

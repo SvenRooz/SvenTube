@@ -72,10 +72,6 @@
     transition: color 0.2s;
 }
 
-.video-date:hover {
-    color: rgb(235, 235, 235);
-}
-
 .video-dots-icon {
     height: 20px;
     cursor: pointer;

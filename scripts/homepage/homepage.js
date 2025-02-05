@@ -1,19 +1,21 @@
-import {videos} from '../../data/videos.js';
+import { videos } from '../../data/videos.js';
 
-function generateVideosHTML(videos) {
-  let videosHML = '';
+function generateVideosHTML() {
+  let videosHTML = '';
 
   videos.videosList.forEach(video => {
+		const videoCreator = video.getVideoCreator();
+		
     const html = 
       `
         <a href="html/watch.html">
           <div class="video-container">
-            <img src="images/video-preview/Clip1.png" class="video-preview">
+            <img src="${video.thumbnailPath}" class="video-preview">
             <div class="video-title-container">
-              <img src="images/profile-pictures/pfp-sven.png" class="video-creator-pfp">
+              <img src="${videoCreator.profilePicturePath}" class="video-creator-pfp">
               <div class="video-text-container">
-                <p class="video-title"> Super Funny Video 1!!! </p>
-                <p class="video-creator"> DexyBentai </p>
+                <p class="video-title"> ${video.title} </p>
+                <p class="video-creator"> ${videoCreator.username} </p>
                 <p class="video-date"> 1 hour ago </p>
               </div>
               <img src="icons/homepage/dots-icon.png" class="video-dots-icon">
@@ -21,5 +23,12 @@ function generateVideosHTML(videos) {
           </div>
         </a>
       `
+
+			videosHTML += html;
   });
+
+	document.querySelector('.video-grid')
+		.innerHTML = videosHTML;
 }
+
+generateVideosHTML();

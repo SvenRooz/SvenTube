@@ -22,7 +22,7 @@ class Users {
       email: 'roozendaalsven@gmail.com',
       passwordHash: 'dummypassword',
       username: 'DexyBentai',
-      profilePicturePath: '../images/profile-pictures/pfp-sven.png',
+      profilePicturePath: 'images/profile-pictures/pfp-sven.png',
       dateJoined: new Date(),
       description: 'My name is DexyBentai, the creator of SvenTube!',
       adminPrivileges: true
@@ -37,7 +37,7 @@ class Users {
       email: ' lis368612@gmail.com',
       passwordHash: 'dummypassword',
       username: 'Moussie',
-      profilePicturePath: '../images/profile-pictures/pfp-moussie.png',
+      profilePicturePath: 'images/profile-pictures/pfp-moussie.png',
       dateJoined: new Date(),
       description: 'Moussie\'s test account!',
       adminPrivileges: false
