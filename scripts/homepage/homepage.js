@@ -1,5 +1,13 @@
 import { videos } from '../../data/videos.js';
 
+/* --- Running code --- */
+
+generateVideosHTML();
+
+
+/* --- Functions --- */
+
+/* Generates the HTML for the video grid */
 function generateVideosHTML() {
   let videosHTML = '';
 
@@ -31,4 +39,3 @@ function generateVideosHTML() {
 		.innerHTML = videosHTML;
 }
 
-generateVideosHTML();

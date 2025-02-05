@@ -1,3 +1,4 @@
+/* Contains all information about a user */
 class User {
   userId;
   email;
@@ -13,6 +14,7 @@ class User {
   }
 }
 
+/* Contains all registered users */
 class Users {
   usersList = [];
 
@@ -48,5 +50,6 @@ class Users {
   }
 }
 
+// Export variables
 export const users = new Users();
-export const activeUser = users.usersList[0];
+export const currentUser = users.usersList[0];

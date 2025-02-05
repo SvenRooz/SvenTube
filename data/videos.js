@@ -1,5 +1,6 @@
 import { users } from "./users.js";
 
+/* Contains all information about a video */
 class Video {
   videoId;
   videoPath;
@@ -14,6 +15,7 @@ class Video {
     Object.assign(this, videoObject);
   }
 
+  /* Returns the creator's user object */
 	getVideoCreator() {
 		let matchingUser;
 
@@ -27,6 +29,7 @@ class Video {
 	}
 }
 
+/* Contains all videos */
 class Videos {
   videosList = [];
 
@@ -51,6 +54,17 @@ class Videos {
 
     this.videosList = videos;
   }
+
+  /* Returns a list containing all videos created by a user */
+  getVideosByUser(userId) {
+    const userVideos = this.videosList.filter((video) => {
+      return video.creatorId === userId;
+    })
+
+    return userVideos;
+  }
 }
 
+
+// Export variables
 export const videos = new Videos();
