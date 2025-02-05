@@ -1,18 +1,42 @@
 class Video {
-    id;
-    videoPath;
-    thumbnailPath;
-    title;
-    description;
-    creatorId;
-    creationDate;
-    durationSeconds;
+  videoId;
+  videoPath;
+  thumbnailPath;
+  title;
+  description;
+  creatorId;
+  creationDate;
+  durationSeconds;
 
-    constructor(id, videoPath, thumbnailPath, title, description, creatorId, creationDate, durationSeconds) {
-        Object.assign(this, {id, videoPath, thumbnailPath, title, description, creatorId, creationDate, durationSeconds });
+  constructor(videoObject) {
+    Object.assign(this, videoObject);
+  }
+}
+
+class Videos {
+  videosList = [];
+
+  constructor() {
+    let videos = [];
+
+    for (let i = 1; i <= 5; i++) {
+      const videoObject = {
+        videoId: i,
+        videoPath: `../videos/Clip${i}.mp4`,
+        thumbnailPath: `../images/video-preview/Clip${i}.png`,
+        title: `Video Title ${i}`,
+        description: 'No description',
+        creatorId: 1,
+        creationDate: new Date(),
+        durationSeconds: 20
+      };
+
+      const video = new Video(videoObject);
+      videos.push(video);
     }
+
+    this.videosList = videos;
+  }
 }
 
-function generateVideos() {
-    
-}
+export const videos = new Videos();
