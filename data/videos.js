@@ -1,5 +1,6 @@
 import { users } from "./users.js";
 
+
 /* Contains all information about a video */
 class Video {
   videoId;
@@ -59,7 +60,7 @@ class Videos {
   getVideosByUser(userId) {
     const userVideos = this.videosList.filter((video) => {
       return video.creatorId === userId;
-    })
+    });
 
     return userVideos;
   }

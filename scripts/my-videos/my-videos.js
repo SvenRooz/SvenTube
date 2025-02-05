@@ -1,9 +1,12 @@
 import { videos } from '../../data/videos.js';
 import { currentUser } from '../../data/users.js';
+import { generateSidebarHTML } from '../utils/sidebar.js';
+
 
 /* --- Running code --- */
 
 generateVideoRowsHTML();
+generateSidebarHTML();
 
 
 /* --- Functions --- */
@@ -31,11 +34,11 @@ function generateVideoRowsHTML() {
           <button class="video-edit-button button-gray-to-white"> Edit video </button>
         </div>
       </div>
-    `
+    `;
 
     videoRowsHTML += html;
   });
 
-  document.querySelector('.video-grid')
+  document.querySelector('.js-video-grid')
     .innerHTML = videoRowsHTML;
 }

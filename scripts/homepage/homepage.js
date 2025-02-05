@@ -1,5 +1,6 @@
 import { videos } from '../../data/videos.js';
 
+
 /* --- Running code --- */
 
 generateVideosHTML();
@@ -30,12 +31,12 @@ function generateVideosHTML() {
             </div>
           </div>
         </a>
-      `
+      `;
 
 			videosHTML += html;
   });
 
-	document.querySelector('.video-grid')
+	document.querySelector('.js-video-grid')
 		.innerHTML = videosHTML;
 }
 
