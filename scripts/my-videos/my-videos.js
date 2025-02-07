@@ -1,13 +1,14 @@
 import { videos } from '../../data/videosData.js';
 import { currentUser } from '../../data/usersData.js';
 import { generateSidebarHTML } from '../utils/sidebar.js';
+import { formatTimeDDMMYYYY} from '../utils/time.js';
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
 /* --- Running code --- */
 
 generateVideoRowsHTML();
 generateSidebarHTML();
-console.log(currentUser.dateJoined);
 
 
 /* --- Functions --- */
@@ -31,7 +32,7 @@ function generateVideoRowsHTML() {
         </div>
 
         <div class="video-properties-grid">
-          <p class="video-date"> 13/01/2025 </p>
+          <p class="video-date"> ${formatTimeDDMMYYYY(video.creationDate)} </p>
           <button class="video-edit-button button-gray-to-white"> Edit video </button>
         </div>
       </div>
