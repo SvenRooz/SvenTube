@@ -15,7 +15,7 @@ class User {
 }
 
 /* Contains all registered users */
-class Users {
+export class Users {
   usersList = [];
 
   constructor() {
@@ -49,7 +49,3 @@ class Users {
     this.usersList.push(user2);
   }
 }
-
-// Export variables
-export const users = new Users();
-export const currentUser = users.usersList[0];

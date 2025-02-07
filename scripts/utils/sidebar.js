@@ -1,4 +1,4 @@
-import { currentUser } from "../../data/users.js";
+import { currentUser } from "../../data/usersData.js";
 
 
 /* Generates the HTML for the sidebar */

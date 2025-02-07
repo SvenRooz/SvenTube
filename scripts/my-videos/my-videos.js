@@ -1,5 +1,5 @@
-import { videos } from '../../data/videos.js';
-import { currentUser } from '../../data/users.js';
+import { videos } from '../../data/videosData.js';
+import { currentUser } from '../../data/usersData.js';
 import { generateSidebarHTML } from '../utils/sidebar.js';
 
 

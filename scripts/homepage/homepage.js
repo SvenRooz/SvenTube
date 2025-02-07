@@ -1,4 +1,4 @@
-import { videos } from '../../data/videos.js';
+import { videos } from '../../data/videosData.js';
 
 
 /* --- Running code --- */

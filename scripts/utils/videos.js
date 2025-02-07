@@ -1,4 +1,4 @@
-import { users } from "./users.js";
+import { users } from "../../data/usersData.js";
 
 
 /* Contains all information about a video */
@@ -31,7 +31,7 @@ class Video {
 }
 
 /* Contains all videos */
-class Videos {
+export class Videos {
   videosList = [];
 
   constructor() {
@@ -65,7 +65,3 @@ class Videos {
     return userVideos;
   }
 }
-
-
-// Export variables
-export const videos = new Videos();
