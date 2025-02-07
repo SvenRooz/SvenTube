@@ -1,3 +1,5 @@
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
 /* Contains all information about a user */
 class User {
   userId;
@@ -25,7 +27,7 @@ export class Users {
       passwordHash: 'dummypassword',
       username: 'DexyBentai',
       profilePicturePath: 'images/profile-pictures/pfp-sven.png',
-      dateJoined: new Date(),
+      dateJoined: dayjs('2025-02-07'),
       description: 'My name is DexyBentai, the creator of SvenTube!',
       adminPrivileges: true
     };
@@ -40,7 +42,7 @@ export class Users {
       passwordHash: 'dummypassword',
       username: 'Moussie',
       profilePicturePath: 'images/profile-pictures/pfp-moussie.png',
-      dateJoined: new Date(),
+      dateJoined: dayjs('2025-03-07'),
       description: 'Moussie\'s test account!',
       adminPrivileges: false
     };

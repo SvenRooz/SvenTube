@@ -7,6 +7,7 @@ import { generateSidebarHTML } from '../utils/sidebar.js';
 
 generateVideoRowsHTML();
 generateSidebarHTML();
+console.log(currentUser.dateJoined);
 
 
 /* --- Functions --- */

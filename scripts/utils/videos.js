@@ -1,4 +1,5 @@
 import { users } from "../../data/usersData.js";
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
 /* Contains all information about a video */
@@ -37,6 +38,8 @@ export class Videos {
   constructor() {
     let videos = [];
 
+    const date = dayjs();
+
     for (let i = 1; i <= 5; i++) {
       const videoObject = {
         videoId: i,
@@ -45,7 +48,7 @@ export class Videos {
         title: `Video Title ${i}`,
         description: 'No description',
         creatorId: 1,
-        creationDate: new Date(),
+        creationDate: date.subtract(i, "hour"),
         durationSeconds: 20
       };
 
