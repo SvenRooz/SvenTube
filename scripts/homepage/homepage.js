@@ -1,4 +1,5 @@
 import { videos } from '../../data/videosData.js';
+import { formatTimeDiff } from '../utils/time.js';
 
 
 /* --- Running code --- */
@@ -25,7 +26,7 @@ function generateVideosHTML() {
               <div class="video-text-container">
                 <p class="video-title"> ${video.title} </p>
                 <p class="video-creator"> ${videoCreator.username} </p>
-                <p class="video-date"> 1 hour ago </p>
+                <p class="video-date"> ${formatTimeDiff(video.creationDate)} ago </p>
               </div>
               <img src="icons/homepage/dots-icon.png" class="video-dots-icon">
             </div>
