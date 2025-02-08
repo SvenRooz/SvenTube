@@ -47,10 +47,7 @@
 		</div>
 
     <div class="sidebar">
-      <div class="sidebar-profile-info">
-        <img src="../images/profile-pictures/pfp-sven.png" class="sidebar-creator-pfp">
-        <p class="sidebar-creator-name"> DexyBentai </p>
-      </div>
+      <div class="sidebar-profile-info js-sidebar-profile-info"></div>
 
       <div class="sidebar-button-content">
         <a href="profile.html">
@@ -87,9 +84,7 @@
 
     <div class="profile-info-container">
       <div class="profile-info-row">
-        <div class="profile-info-pfp-container">
-          <img src="../images/profile-pictures/pfp-sven.png" class="profile-info-pfp">
-        </div>
+        <div class="profile-info-pfp-container js-profile-info-pfp-container"></div>
 
         <div class="profile-row-right">
           <p class="profile-info-explanation"> Profile picture </p>
@@ -107,7 +102,7 @@
 
       <div class="profile-info-row">
         <div class="profile-input-container">
-          <input value="DexyBentai" class="profile-name-input rectangle-input-field">
+          <input class="profile-name-input rectangle-input-field js-profile-name-input">
         </div>
 
         <div class="profile-row-right">
@@ -120,7 +115,7 @@
 
       <div class="profile-info-row">
         <div class="profile-input-container">
-          <input value="He/Him" placeholder="Example: He/Him, She/Her etc." class="profile-gender-input rectangle-input-field">
+          <input placeholder="Example: He/Him, She/Her etc." class="profile-gender-input rectangle-input-field js-profile-gender-input">
         </div>
 
         <div class="profile-row-right">
@@ -133,10 +128,11 @@
 
       <div class="profile-info-row">
         <div class="profile-input-container">
-          <select class="profile-location-input rectangle-input-field" name="cars">
-            <option> Not set </option>
-            <option> Netherlands </option>
-            </select>
+          <select class="profile-location-input rectangle-input-field js-profile-location-input">
+            <option value="0"> Not set </option>
+            <option value="1"> Netherlands </option>
+            <option value="2"> Poland </option>
+          </select>
         </div>
 
         <div class="profile-row-right">
@@ -150,13 +146,13 @@
       <div class="profile-info-description-row profile-info-row">
         <p class="profile-info-explanation"> About me </p>
         <p class="profile-info-extra-explanation"> Tell others more about yourself or your channel. </p>
-        <textarea placeholder="No description set" class="profile-info-description-input rectangle-input-field">Hi, my name is DexyBentai and I am the creator of SvenTube!</textarea>
+        <textarea placeholder="No description set" class="profile-info-description-input rectangle-input-field js-profile-description-info-input">Hmmmm</textarea>
       </div>
 
       <div class="profile-general-info-row profile-info-row">
         <p class="profile-info-explanation"> General info </p>
-        <p class="profile-info-extra-explanation"> Email: DexyBentai@gmail.com </p>
-        <p class="profile-info-extra-explanation"> Date joined: 04/02/2025 </p>
+        <p class="profile-info-extra-explanation js-profile-general-info-email"></p>
+        <p class="profile-info-extra-explanation js-profile-general-info-date-joined"></p>
         <button class="profile-delete-account-button button-light-gray-to-white"> Delete account </button>
       </div>
 

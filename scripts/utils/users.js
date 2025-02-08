@@ -10,6 +10,8 @@ class User {
   profilePicturePath;
   dateJoined;
   description;
+  pronouns;
+  location;
   adminPrivileges;
 
   constructor(userObject) {
@@ -30,6 +32,8 @@ export class Users {
       profilePicturePath: 'images/profile-pictures/pfp-sven.png',
       dateJoined: dayjs('2025-07-02'),
       description: 'My name is DexyBentai, the creator of SvenTube!',
+      pronouns: 'He/Him',
+      location: 1,
       adminPrivileges: true
     };
 
@@ -45,6 +49,8 @@ export class Users {
       profilePicturePath: 'images/profile-pictures/pfp-moussie.png',
       dateJoined: dayjs('2025-07-03'),
       description: 'Moussie\'s test account!',
+      pronouns: 'They/Them',
+      location: 2,
       adminPrivileges: false
     };
 

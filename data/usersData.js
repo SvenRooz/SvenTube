@@ -2,5 +2,5 @@ import { Users } from "../scripts/utils/users.js";
 
 
 // Export variables
-export const users = new Users();
-export const currentUser = users.usersList[0];
+export let users = new Users();
+export let currentUser = users.usersList[0];
