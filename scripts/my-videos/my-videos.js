@@ -16,14 +16,6 @@ generateSidebarHTML();
 document.querySelector('.js-select-all-checkbox')
   .addEventListener('change', checkAllBoxes);
 
-// Event listener for regular checkboxes
-document.querySelectorAll('.js-select-video-checkbox')
-  .forEach((checkbox) => {
-    checkbox.addEventListener('change', (event) => {
-      toggleCheckbox(event);
-    })
-});
-
 
 /* --- Functions --- */
 
@@ -81,4 +73,12 @@ function generateVideoRowsHTML() {
 
   document.querySelector('.js-video-grid')
     .innerHTML = videoRowsHTML;
+  
+  // Event listener for regular checkboxes
+  document.querySelectorAll('.js-select-video-checkbox')
+  .forEach((checkbox) => {
+    checkbox.addEventListener('change', (event) => {
+      toggleCheckbox(event);
+    })
+  });
 }
