@@ -1,10 +1,11 @@
+/* Configuration for requesting the data */
 const config = {
   cUrl: 'https://api.countrystatecity.in/v1/countries',
   ckey: ''
 }
 
-export const countryList = loadCountries();
 
+/* Requests the data from the API and returns it */
 function loadCountries() {
   let apiEndPoint = config.cUrl;
 
@@ -14,3 +15,7 @@ function loadCountries() {
       return data;
     });
 }
+
+
+// Export variable
+export const countryList = loadCountries();

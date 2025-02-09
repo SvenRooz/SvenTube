@@ -2,12 +2,14 @@ import { videos } from '../../data/videosData.js';
 import { currentUser } from '../../data/usersData.js';
 import { generateSidebarHTML } from '../utils/sidebar.js';
 import { formatTimeDDMMYYYY} from '../utils/time.js';
+import { generateProfileHeaderHTML } from '../utils/header.js';
 
 
 /* --- Running code --- */
 
 generateVideoRowsHTML();
 generateSidebarHTML();
+generateProfileHeaderHTML();
 
 
 /* --- Event listeners --- */
