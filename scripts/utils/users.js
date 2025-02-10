@@ -33,7 +33,7 @@ export class Users {
       dateJoined: dayjs('2025-07-02'),
       description: 'My name is DexyBentai, the creator of SvenTube!',
       pronouns: 'He/Him',
-      location: 1,
+      location: 156,
       adminPrivileges: true
     };
 
@@ -50,7 +50,7 @@ export class Users {
       dateJoined: dayjs('2025-07-03'),
       description: 'Moussie\'s test account!',
       pronouns: 'They/Them',
-      location: 2,
+      location: 176,
       adminPrivileges: false
     };
 

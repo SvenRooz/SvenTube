@@ -1,6 +1,7 @@
 import { currentUser } from "../../data/usersData.js";
 
 
+/* Generates the header for the "profile" and "my videos" page */
 export function generateProfileHeaderHTML() {
   const headerHTML =
   `

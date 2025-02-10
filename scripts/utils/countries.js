@@ -1,21 +1,20 @@
 /* Configuration for requesting the data */
 const config = {
   cUrl: 'https://api.countrystatecity.in/v1/countries',
-  ckey: ''
+  ckey: 'Mjg3RlVXS1V1aU5ZYUsxRUt6YmtSNk9Vd0xNYWNxNHRKaDNZSXp0Qw=='
 }
 
 
 /* Requests the data from the API and returns it */
-function loadCountries() {
+export async function loadCountryList() {
   let apiEndPoint = config.cUrl;
 
-  fetch(apiEndPoint, { headers: { "X-CSCAPI-KEY": config.ckey } })
-    .then(Response => Response.json())
-    .then(data => {
-      return data;
-    });
+  const response = await fetch(apiEndPoint, { headers: { "X-CSCAPI-KEY": config.ckey } });
+
+  if (!response.ok) {
+    throw new Error('');
+  }
+
+  const data = await response.json();
+  return data;
 }
-
-
-// Export variable
-export const countryList = loadCountries();
