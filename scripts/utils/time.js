@@ -30,3 +30,8 @@ export function formatTimeDiff(date) {
 
   return '0 seconds';
 }
+
+
+export function formatTimeDMonthY(date) {
+  return date.format('D MMM YYYY');
+}
