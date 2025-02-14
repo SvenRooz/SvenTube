@@ -1,9 +1,11 @@
 import { videos } from '../../data/videosData.js';
 import { formatTimeDiff } from '../utils/time.js';
+import { generateGeneralHeaderHTML } from '../utils/header.js';
 
 
 /* --- Running code --- */
 
+generateGeneralHeaderHTML();
 generateVideosHTML();
 
 

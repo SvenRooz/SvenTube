@@ -6,9 +6,11 @@
     <link rel="icon" type="image/png" href="../favicon.png">
 
     <link rel="stylesheet" href="../css/utils/header.css">
+    <link rel="stylesheet" href="../css/utils/scrollbar.css">
+    <link rel="stylesheet" href="../css/utils/buttons.css">
+
     <link rel="stylesheet" href="../css/watch/general.css">
     <link rel="stylesheet" href="../css/watch/video-layout.css">
-    <link rel="stylesheet" href="../css/utils/scrollbar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,31 +18,7 @@
   </head>
 
   <body>
-    <div class="header">
-			<div class="header-left">
-        <a href="../index.html">
-          <img src="../icons/homepage/sventube-logo.png" class="header-logo">
-        </a>
-			</div>
-
-			<div class="header-middle">
-				<input class="searchbar" placeholder="Search...">
-				<button class="search-button">
-					<img src="../icons/homepage/search-icon.png" class="search-button-icon">
-				</button>
-			</div>
-
-			<div class="header-right">
-        <a href="my-videos.html">
-          <div class="create-button">
-            Create
-            <img src="../icons/homepage/create-icon.png" class="create-button-icon">
-          </div>
-        </a>
-
-				<img src="../images/profile-pictures/pfp-sven.png" class="profile-button-icon">
-			</div>
-		</div>
+    <div class="header js-header"></div>
 
     <div class="video-layout-container">
       <div class="video-view">
@@ -126,5 +104,7 @@
 
       </div>
     </div>
+
+    <script src="../scripts/watch/watch.js" type="module"></script>
   </body>
 </html>
