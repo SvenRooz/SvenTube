@@ -1,3 +1,7 @@
+:root {
+  --sidebar-transition: all 0.3s;
+}
+
 .header-sidebar {
   z-index: 100;
   position: fixed;
@@ -8,13 +12,21 @@
   top: 75px;
   bottom: 0;
   left: 0;
+}
 
+.header-sidebar.closed {
+  z-index: -1;
 }
 
 .header-sidebar-empty {
   flex: 1;
-  background-color: gray;
-  opacity: 0.2;
+  background-color: black;
+  opacity: 0.25;
+  transition: var(--sidebar-transition);
+}
+
+.js-header-sidebar-empty.closed {
+  opacity: 0;
 }
 
 .header-sidebar-content {
@@ -26,6 +38,16 @@
   background-color: rgb(29, 29, 29);
   padding-left: 10px;
   padding-right: 10px;
+
+  transition: var(--sidebar-transition);
+}
+
+.js-header-sidebar-content.closed {
+  width: 0;
+}
+
+.js-header-sidebar-content.closed div {
+  opacity: 0;
 }
 
 .header-sidebar-user-info {

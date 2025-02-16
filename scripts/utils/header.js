@@ -29,7 +29,7 @@ export function generateGeneralHeaderHTML() {
           </button>
         </a>
 
-        <img src="../${currentUser.profilePicturePath}" class="profile-button-icon">
+        <img src="../${currentUser.profilePicturePath}" class="profile-button-icon js-profile-button-icon">
       </div>
     `;
   } else {
@@ -44,7 +44,6 @@ export function generateGeneralHeaderHTML() {
     `;
   }
     
-
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
   
@@ -87,6 +86,7 @@ export function generateProfileHeaderHTML() {
 }
 
 
+/* Generates the sidebar of the header */
 function generateHeaderSidebarHTML() {
   // const headerSideBarHTML = 
   // `
@@ -96,6 +96,34 @@ function generateHeaderSidebarHTML() {
   // document.querySelector('.js-header-sidebar')
   //   .innerHTML = headerSideBarHTML;
 
-  // document.querySelector('header-sidebar-empty')
-  //   .addEventListener();
+  document.querySelector('.js-profile-button-icon')
+    .addEventListener('click', () => {
+      toggleSidebar();
+    });
+
+  document.querySelector('.js-header-sidebar-empty')
+    .addEventListener('click', () => {
+      toggleSidebar();
+    });
+}
+
+
+/* Toggles the sidebar on and off */
+function toggleSidebar() {
+  const sidebar = document.querySelector('.js-header-sidebar');
+  const sidebarContent = document.querySelector('.js-header-sidebar-content');
+  const sidebarEmpty = document.querySelector('.js-header-sidebar-empty');
+
+  if (sidebar.classList.contains('closed')) {
+    // Opens the sidebar
+    sidebar.classList.remove('closed');
+  } else {
+    // Closes the sidebar after the transitions
+    sidebarContent.addEventListener('transitionend', () => {
+      sidebar.classList.add('closed');
+    }, {once: true});
+  }
+
+  sidebarContent.classList.toggle('closed');
+  sidebarEmpty.classList.toggle('closed');
 }
