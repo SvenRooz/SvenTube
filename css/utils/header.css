@@ -1,13 +1,15 @@
 .header {
   z-index: 100;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  
   left: 0;
   right: 0;
   top: 0;
   height: 75px;
+
   background-color: rgb(19, 19, 19);
 }
 
@@ -105,6 +107,7 @@
 }
 
 .profile-button-icon {
+  z-index: 150;
   height: 32px;
   border-radius: 18px;
   cursor: pointer;

@@ -55,3 +55,31 @@
     background-color: rgb(235, 235, 235);
     color: rgb(24, 24, 24);
 }
+
+.button-sidebar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    gap: 15px;
+
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(29, 29, 29);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-sidebar:hover {
+    background-color: rgb(39, 39, 39);
+}
+
+.button-sidebar-icon {
+    height: 25px;
+    filter: invert(0.9);
+}
+
+.button-sidebar-text {
+    font-size: 15px;
+    color: rgb(235, 235, 235);
+}

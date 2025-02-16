@@ -14,24 +14,24 @@ export function generateSidebarHTML() {
 
     <div class="sidebar-button-content">
       <a href="profile.html">
-        <button class="sidebar-button">
-          <img src="${iconsPath}/profile-icon.png" class="sidebar-button-icon">
-          <p class="sidebar-button-text"> My profile </p>
+        <button class="button-sidebar">
+          <img src="${iconsPath}/profile-icon.png" class="button-sidebar-icon">
+          <p class="button-sidebar-text"> My profile </p>
         </button>
       </a>
 
       <a href="my-videos.html">
-        <button class="sidebar-button">
-          <img src="${iconsPath}/my-videos-icon.png" class="sidebar-button-icon">
-          <p class="sidebar-button-text"> My videos </p>
+        <button class="button-sidebar">
+          <img src="${iconsPath}/my-videos-icon.png" class="button-sidebar-icon">
+          <p class="button-sidebar-text"> My videos </p>
         </button>
       </a>
     </div>
 
     <div class="sidebar-bottom-button-content">
-      <button class="sidebar-button">
-        <img src="../icons/profile/settings-icon.png" class="sidebar-button-icon">
-        <p class="sidebar-button-text"> Settings </p>
+      <button class="button-sidebar">
+        <img src="../icons/profile/settings-icon.png" class="button-sidebar-icon">
+        <p class="button-sidebar-text"> Settings </p>
       </button>
     </div>
   `;

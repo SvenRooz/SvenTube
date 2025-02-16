@@ -5,18 +5,18 @@ import { currentUser } from "../../data/usersData.js";
 export function generateGeneralHeaderHTML() {
   let headerHTML = `
     <div class="header-left">
-        <a href="../index.html">
-          <img src="../icons/homepage/sventube-logo.png" class="header-logo">
-        </a>
-      </div>
+      <a href="../index.html">
+        <img src="../icons/homepage/sventube-logo.png" class="header-logo">
+      </a>
+    </div>
 
-      <div class="header-middle">
-        <input class="searchbar" placeholder="Search for videos on my channel">
-    
-        <button class="search-button">
-          <img src="../icons/homepage/search-icon.png" class="search-button-icon">
-        </button>
-      </div>
+    <div class="header-middle">
+      <input class="searchbar" placeholder="Search for videos on my channel">
+  
+      <button class="search-button">
+        <img src="../icons/homepage/search-icon.png" class="search-button-icon">
+      </button>
+    </div>
   `;
   
   if (currentUser) {
@@ -47,6 +47,8 @@ export function generateGeneralHeaderHTML() {
 
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
+  
+  generateHeaderSidebarHTML();
 }
 
 
@@ -82,4 +84,18 @@ export function generateProfileHeaderHTML() {
 
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
+}
+
+
+function generateHeaderSidebarHTML() {
+  // const headerSideBarHTML = 
+  // `
+    
+  // `;
+
+  // document.querySelector('.js-header-sidebar')
+  //   .innerHTML = headerSideBarHTML;
+
+  // document.querySelector('header-sidebar-empty')
+  //   .addEventListener();
 }
