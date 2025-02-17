@@ -1,60 +1,78 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-black : rgb(24, 24, 24);
+
+	--transition-02: all 0.2s;
+
+  --border-grey: 1px solid var(--light-grey);
+}
+
 .video-header {
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 75px;
-    height: 130px;
-    margin-left: 250px;
-    background-color: rgb(29, 29, 29);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  top: 75px;
+  height: 130px;
+  margin-left: 250px;
+  background-color: var(--dark-grey);
 }
 
 .my-videos-text {
-    color: rgb(235, 235, 235);
-    font-size: 32px;
-    font-weight: 400;
-    padding: 25px 50px 20px;
-    border-top: 1px solid rgb(50, 50, 50);
-    background-color: rgb(29, 29, 29);
+  color: rgb(235, 235, 235);
+  font-size: 32px;
+  font-weight: 400;
+
+  padding: 25px 50px 20px;
+  border-top: var(--border-grey);
+  background-color: var(--dark-grey);
 }
 
 .video-header-bottom {
-    display: flex;
-    align-items: center;
-    height: 500px;
-    padding: 0px 50px;
-    border-top: 1px solid rgb(50, 50, 50);
-    border-bottom: 1px solid rgb(50, 50, 50);
-    background-color: rgb(29, 29, 29);
+  display: flex;
+  align-items: center;
+
+  height: 500px;
+  padding: 0px 50px;
+
+  border-top: var(--border-grey);
+  border-bottom: var(--border-grey);
+  background-color: var(--dark-grey);
 }
 
 .select-all-content {
-    display: flex;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .select-all-checkbox {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .select-all-text {
-    color: rgb(235, 235, 235);
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 20px;
+  color: var(--text-color-white);
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px;
 }
 
 .header-properties-grid {
-    display: grid;
-    grid-template-columns: 170px 150px;
-    margin-left: 30px;
+  display: grid;
+  grid-template-columns: 170px 150px;
+  margin-left: 30px;
 }
 
 .date-text {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
+  font-size: 15px;
+  color: var(--text-color-white);
 }

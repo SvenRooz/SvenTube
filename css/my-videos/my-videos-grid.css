@@ -1,82 +1,92 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-black : rgb(24, 24, 24);
+
+	--transition-02: all 0.2s;
+
+  --border-grey: 1px solid var(--light-grey);
+}
+
 .video-grid {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .video-row {
-    display: flex;
-    padding: 12px 50px 10px;
-    border-bottom: 1px solid rgb(50, 50, 50);
-    transition: background-color 0.2s;
+  display: flex;
+  padding: 12px 50px 10px;
+  border-bottom: var(--border-grey);
+  transition: var(--transition-02);
 }
 
 .video-row:hover {
-    background-color: rgb(39, 39, 39);
+  background-color: var(--medium-grey);
 }
 
 .select-video-checkbox {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .video-preview {
-    height: 80px;
-    margin-left: 20px;
-    margin-right: 15px;
-    border-radius: 5px;
+  height: 80px;
+  margin-left: 20px;
+  margin-right: 15px;
+  border-radius: 5px;
 }
 
 .video-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 2px;
-    height: 70px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+	
+  gap: 2px;
+  height: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .video-title {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 500px;
+  font-size: 15px;
+  color: var(--text-color-white);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 500px;
 }
 
 .video-description {
-    font-size: 14px;
-    color: rgb(201, 201, 201);
-    max-width: 500px;
+  font-size: 14px;
+  color: var(--text-color-lightgrey);
+  max-width: 500px;
 
-    /* Prevents overflow for some reason... */
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
+  /* Prevents overflow for some reason... */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .video-properties-grid {
-    display: grid;
-    grid-template-columns: 170px 150px;
-    margin-left: 30px;
+  display: grid;
+  grid-template-columns: 170px 150px;
+  margin-left: 30px;
 }
 
 .video-date {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
-    margin-top: 8px;
-    padding-top: 2px;
+  font-size: 15px;
+  color: var(--text-color-white);
+  margin-top: 8px;
+  padding-top: 2px;
 }
 
 .video-edit-button {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
-
-/* .video-edit-button:hover {
-    background-color: rgb(235, 235, 235);
-    color: rgb(24, 24, 24);
-} */

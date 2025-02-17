@@ -1,10 +1,22 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+}
+
 body {
-    padding-top: 80px;
-    font-family: Roboto, Arial;
-    background-color: rgb(29, 29, 29);
+  padding-top: 80px;
+  font-family: Roboto, Arial;
+  background-color: rgb(29, 29, 29);
 }
 
 p {
-    font-family: Roboto, Arial;
-    margin: 0;
+  font-family: Roboto, Arial;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+} 
+  
+a:visited {
+  text-decoration: none;
 }

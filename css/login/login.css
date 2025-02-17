@@ -1,113 +1,127 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-black : rgb(24, 24, 24);
+
+	--transition-02: all 0.2s;
+}
+
 .login-window {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 350px;
-    max-width: 900px;
-    padding: 40px 50px 30px 40px;
-    margin: 50px;
-    background-color: rgb(39, 39, 39);
-    border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  height: 350px;
+  max-width: 900px;
+  padding: 40px 50px 30px 40px;
+  margin: 50px;
+
+  background-color: var(--medium-grey);
+  border-radius: 14px;
 }
 
 .sventube-logo {
-    width: 200px;
-    margin-bottom: 30px;
-    cursor: pointer;
+  width: 200px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .login-window-bottom {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .text-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .signin-text {
-    font-size: 48px;
-    color: rgb(235, 235, 235);
-    margin-bottom: 20px;
+  font-size: 48px;
+  color: var(--text-color-white);
+  margin-bottom: 20px;
 }
 
 .continue-text {
-    font-size: 20px;
-    color: rgb(235, 235, 235);
+  font-size: 20px;
+  color: var(--text-color-white);
 }
 
 .login-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
 }
 
 .login-input {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
 }
 
 .input-email {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .input-email, .input-password {
-    height: 36px;
-    min-width: 350px;
-    padding-left: 10px;
-    padding-right: 10px;
+  height: 36px;
+  min-width: 350px;
+  padding-left: 10px;
+  padding-right: 10px;
 
-    font-family: Roboto, Arial;
-    font-size: 17px;
+  font-family: Roboto, Arial;
+  font-size: 17px;
 
-    background-color: rgb(235, 235, 235);
-    border: none;
-    border-radius: 18px;
-    transition: opacity 0.2s;
+  background-color: var(--text-color-white);
+  border: none;
+  border-radius: 18px;
+  transition: var(--transition-02);
 }
 
 .input-email:hover, .input-password:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .input-email:focus, .input-password:focus{
-    outline: none;
+  outline: none;
 }
 
 .input-email::placeholder, .input-password::placeholder  {
-    color: rgb(24, 24, 24);
+  color: var(--text-color-black);
 }
 
 .login-text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 3px;
-    margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  margin-top: 5px;
 }
 
 .forgot-password-text {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
-    cursor: pointer;
+  font-size: 15px;
+  color: var(--text-color-white);
+  cursor: pointer;
 }
 
 .forgot-password-text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .create-account-text {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
-    cursor: pointer;
+  font-size: 15px;
+  color: var(--text-color-white);
+  cursor: pointer;
 }
 
 .create-account-text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

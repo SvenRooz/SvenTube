@@ -1,33 +1,45 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-black : rgb(24, 24, 24);
+
+	--transition-02: all 0.2s;
+}
+
 .register-window {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 50px 30px 50px;
-    margin: 50px;
-    background-color: rgb(39, 39, 39);
-    border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px 30px 50px;
+  margin: 50px;
+  background-color: var(--medium-grey);
+  border-radius: 14px;
 }
 
 .sventube-logo {
-    width: 200px;
-    margin-bottom: 30px;
-    cursor: pointer;
+  width: 200px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .register-text {
-    font-size: 30px;
-    color: rgb(235, 235, 235);
-    margin-bottom: 30px;
+  font-size: 30px;
+  color: var(--text-color-white);
+  margin-bottom: 30px;
 }
 
 .register-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .register-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .input-username,
@@ -35,16 +47,18 @@
 .input-password, 
 .input-password-again, 
 .input-birthdate {
-    height: 36px;
-    min-width: 350px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgb(235, 235, 235);
-    font-family: Roboto, Arial;
-    font-size: 17px;
-    border: none;
-    border-radius: 18px;
-    transition: opacity 0.2s;
+  background-color: var(--text-color-white);
+  font-family: Roboto, Arial;
+  font-size: 17px;
+
+	height: 36px;
+  min-width: 350px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+	border: none;
+  border-radius: 18px;
+  transition: var(--transition-02);
 }
 
 .input-username:hover, 
@@ -52,7 +66,7 @@
 .input-password:hover, 
 .input-password-again:hover, 
 .input-birthdate:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .input-username:focus, 
@@ -60,7 +74,7 @@
 .input-password:focus, 
 .input-password-again:focus, 
 .input-birthdate:focus {
-    outline: none;
+  outline: none;
 }
 
 .input-username::placeholder, 
@@ -68,7 +82,7 @@
 .input-password::placeholder, 
 .input-password-again::placeholder, 
 .input-birthdate::placeholder {
-    color: rgb(24, 24, 24);
+  color: var(--text-color-black);
 }
 
 .register-button {
@@ -77,13 +91,13 @@
 
 
 .signin-text {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
-    margin-top: 70px;
-    cursor: pointer;
+  font-size: 15px;
+  color: var(--text-color-white);
+  margin-top: 70px;
+  cursor: pointer;
 }
 
 .signin-text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 

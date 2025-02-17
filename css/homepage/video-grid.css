@@ -1,80 +1,91 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+
+	--transition-02: all 0.2s;
+}
+
 .video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 15px;
-    padding: 15px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  padding: 15px 10px;
 }
 
 .video-container {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    background-color: rgb(39, 39, 39);
-    border-radius: 7px;
-    transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: var(--medium-grey);
+  border-radius: 7px;
+  transition: var(--transition-02);
 }
 
 .video-container:hover {
-    background-color: rgb(50, 50, 50);
+  background-color: var(--light-grey);
 }
 
 .video-preview {
-    border-radius: 7px;
-    cursor: pointer;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 .video-title-container {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 
 .video-creator-pfp {
-    height: 32px;
-    border-radius: 16px;
-    cursor: pointer;
+  height: 32px;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .video-text-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-left: 11px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 11px;
 }
 
 .video-title {
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(235, 235, 235);
-    margin: 0;
-    margin-bottom: 5px;
-    cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color-white);
+  margin: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .video-creator {
-    font-size: 14px;
-    color: rgb(201, 201, 201);
-    margin: 0;
-    margin-bottom: 2px;
-    cursor: pointer;
-    transition: color 0.2s;
+  font-size: 14px;
+  color: var(--text-color-lightgrey);
+  margin: 0;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: var(--transition-02);
 }
 
 .video-creator:hover {
-    color: rgb(235, 235, 235);
+  color: var(--text-color-white);
 }
 
 .video-date {
-    font-size: 14px;
-    color: rgb(201, 201, 201);
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.2s;
+  font-size: 14px;
+  color: var(--text-color-lightgrey);
+  margin: 0;
+  cursor: pointer;
+  transition: var(--transition-02)
 }
 
 .video-dots-icon {
-    height: 20px;
-    cursor: pointer;
-    padding-left: 3px;
-    padding-bottom: 3px;
+  height: 20px;
+  cursor: pointer;
+  padding-left: 3px;
+  padding-bottom: 3px;
 }

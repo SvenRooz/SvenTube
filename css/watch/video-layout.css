@@ -1,159 +1,172 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-black : rgb(24, 24, 24);
+	--text-color-darkgrey: rgb(163, 163, 163);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-white: rgb(235, 235, 235);
+
+	--transition-02: all 0.2s;
+}
+
 .video-layout-container {
-    display: flex;
+  display: flex;
 }
 
 .video-view {
-    flex: 1;
-    margin-left: 80px;
+  flex: 1;
+  margin-left: 80px;
 }
 
 .video-player {
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .video-info {
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .video-title {
-    flex: 1;
-    font-size: 26px;
-    font-weight: bold;
-    color: rgb(235, 235, 235);
+  flex: 1;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-color-white);
 }
 
 .video-date {
-    margin-left: 15px;
-    margin-right: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(235, 235, 235);
+  margin-left: 15px;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color-white);
 }
 
 .more-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  transition: var(--transition-02);
 }
 
 .more-button:hover {
-    background-color: rgb(50, 50, 50);
+  background-color: var(--light-grey);
 }
 
 .more-icon {
-    filter: invert(1);
-    height: 20px;
-    cursor: pointer;
+  filter: invert(1);
+  height: 20px;
+  cursor: pointer;
 }
 
 .creator-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .creator-pfp {
-    height: 42px;
-    margin-right: 10px;
-    border-radius: 21px;
-    cursor: pointer;
+  height: 42px;
+  margin-right: 10px;
+  border-radius: 21px;
+  cursor: pointer;
 }
 
 .video-creator {
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(235, 235, 235);
-    cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color-white);
+  cursor: pointer;
 }
 
 .video-description {
-    padding: 15px 15px;
-    min-height: 36px;
-    background-color: rgb(39, 39, 39);
-    border-radius: 10px;
+  padding: 15px 15px;
+  min-height: 36px;
+  background-color: var(--medium-grey);
+  border-radius: 10px;
 }
 
 .video-description-text {
-    font-size: 14px;
-    color: rgb(163, 163, 163);
-    line-height: 18px;
+  font-size: 14px;
+  color: var(--text-color-darkgrey);
+  line-height: 18px;
 }
 
 .video-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 525px;
-    margin-left: 30px;
-    margin-right: 60px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 525px;
+  margin-left: 30px;
+  margin-right: 60px;
+  margin-bottom: 50px;
 }
 
 .video-preview-container {
-    display: flex;
-    border-radius: 8px;
-    transition: background-color 0.2s;
+  display: flex;
+  border-radius: 8px;
+  transition: var(--transition-02);
 }
 
 .video-preview-container:hover {
-    background-color: rgb(50, 50, 50);
+  background-color: var(--light-grey);
 }
 
 .video-preview-container:hover .video-preview-thumbnail {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .video-preview-thumbnail {
-    height: 100px;
-    margin-right: 10px;
-    border-radius: 8px;
-    transition: opacity 0.2s;
-    cursor: pointer;
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: var(--transition-02);
+  cursor: pointer;
 }
 
 .video-preview-info {
-    flex: 1;
-    cursor: pointer;
+  flex: 1;
+  cursor: pointer;
 }
 
 .video-preview-title {
-    font-size: 17px;
-    font-weight: bold;
-    color: rgb(235, 235, 235);
-    margin-top: 3px;
-    margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--text-color-white);
+  margin-top: 3px;
+  margin-bottom: 6px;
 }
 
 .video-preview-creator {
-    font-size: 14px;
-    color: rgb(201, 201, 201);
-    margin-bottom: 4px;
-    transition: color 0.2s;
+  font-size: 14px;
+  color: var(--text-color-lightgrey);
+  margin-bottom: 4px;
+  transition: color 0.2s;
 }
 
 .video-preview-creator:hover {
-    color: rgb(235, 235, 235);
+  color: var(--text-color-white);
 }
 
 .video-preview-date {
-    font-size: 14px;
-    color: rgb(201, 201, 201);
+  font-size: 14px;
+  color: var(--text-color-lightgrey)
 }
 
 .preview-dots-icon {
-    height: 20px;
-    margin-top: 6px;
-    margin-right: 5px;
-    cursor: pointer;
+  height: 20px;
+  margin-top: 6px;
+  margin-right: 5px;
+  cursor: pointer;
 }
