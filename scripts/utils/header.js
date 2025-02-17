@@ -22,7 +22,7 @@ export function generateGeneralHeaderHTML() {
   if (currentUser) {
     headerHTML += `
       <div class="header-right">
-        <a href="my-videos.html">
+        <a href="../html/my-videos.html">
           <button class="create-button button-gray-to-white">
             Create
             <img src="../icons/homepage/create-icon.png" class="create-button-icon">
@@ -35,7 +35,7 @@ export function generateGeneralHeaderHTML() {
   } else {
     headerHTML += `
       <div class="header-right">
-        <a href="html/login.html">
+        <a href="../html/login.html">
           <button class="signin-button button-light-gray-to-white">
             Sign in
           </button>
@@ -47,7 +47,9 @@ export function generateGeneralHeaderHTML() {
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
   
-  generateHeaderSidebarHTML();
+  if (currentUser) {
+    generateHeaderSidebarHTML();
+  }
 }
 
 
@@ -70,14 +72,16 @@ export function generateProfileHeaderHTML() {
     </div>
 
     <div class="header-right">
-      <a href="my-videos.html">
+      <a href="../html/my-videos.html">
         <button class="create-button button-gray-to-white">
           Create
           <img src="../icons/homepage/create-icon.png" class="create-button-icon">
         </button>
       </a>
 
-      <img src="../${currentUser.profilePicturePath}" class="profile-button-icon">
+      <a href=../html/profile.html>
+        <img src="../${currentUser.profilePicturePath}" class="profile-button-icon">
+      </a>
     </div>
   `;
 
@@ -88,13 +92,58 @@ export function generateProfileHeaderHTML() {
 
 /* Generates the sidebar of the header */
 function generateHeaderSidebarHTML() {
-  // const headerSideBarHTML = 
-  // `
-    
-  // `;
+  const headerSideBarHTML = 
+  `
+    <div class="header-sidebar-empty js-header-sidebar-empty closed"></div>
+			<div class="header-sidebar-content js-header-sidebar-content closed">
+				<div class="header-sidebar-user-info">
+					<p class="header-sidebar-user-info-text"> ${currentUser.username} </p>
+					<p class="header-sidebar-user-info-text"> ${currentUser.email} </p>
+				</div>
 
-  // document.querySelector('.js-header-sidebar')
-  //   .innerHTML = headerSideBarHTML;
+				<div class="header-sidebar-buttons-container">
+					<div class="header-sidebar-top-buttons">
+						<a>
+							<button class="button-sidebar">
+								<img src="../icons/homepage/channel-icon.png" class="button-sidebar-icon">
+								<p class="button-sidebar-text"> My channel </p>
+							</button>
+						</a>
+
+						<a href="../html/profile.html">
+							<button class="button-sidebar">
+								<img src="../icons/homepage/profile-icon.png" class="button-sidebar-icon">
+								<p class="button-sidebar-text"> My profile </p>
+							</button>
+						</a>
+
+						<a href="../html/my-videos.html">
+							<button class="button-sidebar">
+								<img src="../icons/homepage/my-videos-icon.png" class="button-sidebar-icon">
+								<p class="button-sidebar-text"> My videos </p>
+							</button>
+						</a>
+					</div>
+
+					<div class="header-sidebar-bottom-buttons">
+						<a>
+							<button class="button-sidebar">
+								<img src="../icons/homepage/settings-icon.png" class="button-sidebar-icon">
+								<p class="button-sidebar-text"> Settings </p>
+							</button>
+						</a>
+
+						<button class="button-sidebar">
+							<img src="../icons/homepage/logout-icon.png" class="button-sidebar-icon">
+							<p class="button-sidebar-text"> Log out </p>
+						</button>
+					</div>
+				</div>
+			</div>
+  `;
+
+  document.querySelector('.js-header-sidebar')
+    .innerHTML = headerSideBarHTML;
 
   document.querySelector('.js-profile-button-icon')
     .addEventListener('click', () => {
