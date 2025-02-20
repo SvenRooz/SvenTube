@@ -1,7 +1,7 @@
 import { currentUser } from "../../data/usersData.js";
 import { generateSidebarHTML } from '../utils/sidebar.js';
 import { formatTimeDDMMYYYY } from "../utils/time.js";
-import { generateProfileHeaderHTML } from '../utils/header.js';
+import { generateHeaderHTML } from '../utils/header-user.js';
 import { loadCountryList } from "../utils/countries.js";
 
 
@@ -9,7 +9,7 @@ import { loadCountryList } from "../utils/countries.js";
 
 generateProfileInfoHTML();
 generateSidebarHTML();
-generateProfileHeaderHTML();
+generateHeaderHTML();
 
 
 /* --- Functions --- */
