@@ -11,11 +11,15 @@ export function generateGeneralHeaderHTML() {
     </div>
 
     <div class="header-middle">
-      <input class="searchbar" placeholder="Search for videos on my channel">
-  
-      <button class="search-button">
-        <img src="../icons/homepage/search-icon.png" class="search-button-icon">
-      </button>
+      <div class="searchbar-container">
+        <input class="searchbar js-searchbar" placeholder="Search for videos">
+    
+        <button class="search-button">
+          <img src="../icons/homepage/search-icon.png" class="search-button-icon">
+        </button>
+      </div>
+
+      <div class="searchbar-dropdown js-searchbar-dropdown closed"></div>
     </div>
   `;
   
@@ -46,6 +50,16 @@ export function generateGeneralHeaderHTML() {
     
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
+
+  document.querySelector('.js-searchbar')
+    .addEventListener('input', event => {
+      renderSearchbar(event);
+    });
+  
+  document.querySelector('.js-searchbar')
+    .addEventListener('focusout', event => {
+      renderSearchbar(event);
+    });
   
   if (currentUser) {
     generateHeaderSidebarHTML();
@@ -87,6 +101,24 @@ export function generateProfileHeaderHTML() {
 
   document.querySelector('.js-header')
     .innerHTML = headerHTML;
+}
+
+
+function renderSearchbar(event) {
+  const searchbarDropdown = document.querySelector('.js-searchbar-dropdown')
+
+  if (event.type === 'focusout') {
+    searchbarDropdown.classList.add('closed');
+    return;
+  }
+
+  const searchbar = event.target;
+
+  if (searchbar.value) {
+    searchbarDropdown.classList.remove('closed');
+  } else {
+    searchbarDropdown.classList.add('closed');
+  }
 }
 
 

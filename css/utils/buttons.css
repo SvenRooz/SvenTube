@@ -1,85 +1,97 @@
+:root {
+	--dark-grey: rgb(29, 29, 29);
+	--medium-grey: rgb(39, 39, 39);
+	--light-grey: rgb(50, 50, 50);
+
+	--text-color-white: rgb(235, 235, 235);
+	--text-color-lightgrey: rgb(201, 201, 201);
+	--text-color-black : rgb(24, 24, 24);
+
+	--transition-02: all 0.2s;
+}
+
 .button-gray-to-white {
-    height: fit-content;
-    padding: 9px 14px;
+  height: fit-content;
+  padding: 9px 14px;
 
-    font-family: Roboto, Arial;
-    font-size: 15px;
-    color: rgb(235, 235, 235);
+  font-family: Roboto, Arial;
+  font-size: 15px;
+  color: var(--text-color-white);
 
-    background-color: rgb(29, 29, 29);
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;    
+  background-color: var(--dark-grey);
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: var(--transition-02);  
 }
 
 .button-gray-to-white:hover {
-    background-color: rgb(235, 235, 235);
-    color: rgb(24, 24, 24);
+  background-color: var(--text-color-white);
+  color: var(--text-color-black);
 }
 
 .button-white-to-black {
-    padding: 9px 14px;
+  padding: 9px 14px;
 
-    font-family: Roboto, Arial;
-    font-size: 16px;
-    color: rgb(24, 24, 24);
+  font-family: Roboto, Arial;
+  font-size: 16px;
+  color: var(--text-color-black);
 
-    background-color: rgb(235, 235, 235);
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s; 
+  background-color: var(--text-color-white);
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: var(--transition-02); 
 }
 
 .button-white-to-black:hover {
-    background-color: rgb(29, 29, 29);
-    color: rgb(235, 235, 235);
+  background-color: var(--dark-grey);
+  color: var(--text-color-white);
 }
 
 .button-light-gray-to-white {
-    padding: 9px 14px;
+  padding: 9px 14px;
 
-    font-family: Roboto, Arial;
-    font-size: 15px;
-    color: rgb(235, 235, 235);
+  font-family: Roboto, Arial;
+  font-size: 15px;
+  color: var(--text-color-white);
 
-    background-color: rgb(50, 50, 50);
-    border: none;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;    
+  background-color: var(--light-grey);
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: var(--transition-02);  
 }
 
 .button-light-gray-to-white:hover {
-    background-color: rgb(235, 235, 235);
-    color: rgb(24, 24, 24);
+  background-color: var(--text-color-white);
+  color: var(--text-color-black);
 }
 
 .button-sidebar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 15px;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  gap: 15px;
 
-    border: none;
-    border-radius: 8px;
-    background-color: rgb(29, 29, 29);
-    cursor: pointer;
-    transition: background-color 0.2s;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--dark-grey);
+  cursor: pointer;
+  transition: var(--transition-02);
 }
 
 .button-sidebar:hover {
-    background-color: rgb(39, 39, 39);
+  background-color: var(--medium-grey);
 }
 
 .button-sidebar-icon {
-    height: 25px;
-    filter: invert(0.9);
+  height: 25px;
+  filter: invert(0.9);
 }
 
 .button-sidebar-text {
-    font-size: 15px;
-    color: rgb(235, 235, 235);
+  font-size: 15px;
+  color: var(--text-color-white);
 }
