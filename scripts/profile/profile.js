@@ -7,6 +7,10 @@ import { loadCountryList } from "../utils/countries.js";
 
 /* --- Running code --- */
 
+if (!currentUser) {
+  window.location = '../index.html';
+}
+
 generateProfileInfoHTML();
 generateSidebarHTML();
 generateHeaderHTML();

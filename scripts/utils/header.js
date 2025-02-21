@@ -157,14 +157,7 @@ function generateHeaderSidebarHTML() {
     .innerHTML = headerSideBarHTML;
 
   document.querySelector('.js-profile-button-icon')
-    .addEventListener('click', () => {
-      toggleSidebar();
-    });
-
-  document.querySelector('.js-header-sidebar-empty')
-    .addEventListener('click', () => {
-      toggleSidebar();
-    });
+    .addEventListener('click', toggleSidebar);
 }
 
 
@@ -174,16 +167,21 @@ function toggleSidebar() {
   const sidebarContent = document.querySelector('.js-header-sidebar-content');
   const sidebarEmpty = document.querySelector('.js-header-sidebar-empty');
 
+  // Sidebar is about to open
   if (sidebar.classList.contains('closed')) {
-    // Opens the sidebar
     sidebar.classList.remove('closed');
-  } else {
-    // Closes the sidebar after the transitions
+    sidebarEmpty.addEventListener('click', toggleSidebar);
+  
+  // Sidebar is about to close
+  } else { 
+    sidebarEmpty.removeEventListener('click', toggleSidebar);
+
     sidebarContent.addEventListener('transitionend', () => {
       sidebar.classList.add('closed');
     }, {once: true});
   }
 
+  // Toggle sidebar
   sidebarContent.classList.toggle('closed');
   sidebarEmpty.classList.toggle('closed');
 }

@@ -7,6 +7,10 @@ import { generateHeaderHTML } from '../utils/header-user.js';
 
 /* --- Running code --- */
 
+if (!currentUser) {
+  window.location = '../index.html';
+}
+
 generateVideoRowsHTML();
 generateSidebarHTML();
 generateHeaderHTML();
