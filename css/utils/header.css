@@ -56,7 +56,7 @@
 .searchbar {
   min-width: 0;
   flex: 1;
-  height: 30px;
+  height: 34px;
   padding-left: 10px;
   margin-right: 2px;
 
@@ -64,8 +64,8 @@
   font-size: 16px;
   
   border: none;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05) inset; */
   transition: var(--transition-02);
 }
@@ -89,12 +89,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
+  height: 36px;
   
   border: none;
   background-color: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   cursor: pointer;
   /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05) inset; */
   transition: var(--transition-02);
@@ -110,7 +110,7 @@
 
 .search-button-icon {
   height: 18px;
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .searchbar-dropdown {
@@ -119,15 +119,14 @@
   flex-direction: column;
 
   width: 100%;
-  margin-top: 30px;
+  margin-top: 36px;
   padding: 10px 0;
 
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--black);
 }
 
 .searchbar-dropdown.closed {
-  /* display: none; */
   height: 0;
   opacity: 0;
 }

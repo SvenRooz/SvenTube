@@ -1,5 +1,6 @@
 import { currentUser } from "../../data/usersData.js";
 import { videos } from "../../data/videosData.js";
+import { stringIncludes } from "./strings.js";
 
 
 /* Generates the header for all basic pages */
@@ -83,7 +84,8 @@ function renderSearchbarDropdown(event) {
 
   for (let i = 0; i < videos.videosList.length && numSearchResults < 10; i++) {
     const videoTitle = videos.videosList[i].title;
-    if (videoTitle.toLowerCase().includes(searchbarText.toLowerCase())) {
+
+    if (stringIncludes(videoTitle, searchbarText)) {
       const html = `<a href="../html/watch.html" class="searchbar-text"> ${videoTitle} </a>`
       dropdownHTML += html;
       numSearchResults++;
