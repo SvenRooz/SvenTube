@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/my-videos/general.css">
     <link rel="stylesheet" href="../css/my-videos/my-videos-grid.css">
     <link rel="stylesheet" href="../css/my-videos/videos-header.css">
+    <link rel="stylesheet" href="../css/my-videos/upload-window.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +40,24 @@
     </div>
 
     <div class="video-grid js-video-grid"></div>
+
+    <div class="upload-window-container js-upload-window-container closed">
+      <div class="upload-window">
+        <div class="upload-window-top-bar">
+          <p class="upload-window-top-bar-text"> Upload video </p>
+          <img src="../icons/my-videos/close-icon.png" class="upload-window-exit-button js-upload-window-exit-button">
+        </div>
+
+        <div class="upload-window-area">
+          <div class="upload-window-drag-container">
+            <img src="../icons/my-videos/upload-icon.png" class="upload-window-area-upload-icon">
+          </div>
+
+          <p class="upload-window-area-text"> Click or drag file here to upload </p>
+          <button class="upload-window-select-file-button button-black-to-white"> Select file </button>
+        </div>
+      </div>
+    </div>
 
     <script src="../scripts/my-videos/my-videos.js" type="module"></script>
 

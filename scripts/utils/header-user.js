@@ -1,6 +1,7 @@
 import { currentUser } from "../../data/usersData.js";
 import { videos } from "../../data/videosData.js";
 import { stringIncludes } from "./strings.js";
+import { toggleUploadWindow } from "../my-videos/my-videos.js";
 
 /* Generates the header for the user specific pages */
 export function generateHeaderHTML() {
@@ -25,12 +26,7 @@ export function generateHeaderHTML() {
     </div>
 
     <div class="header-right">
-      <a href="../html/my-videos.html">
-        <button class="create-button button-gray-to-white">
-          Create
-          <img src="../icons/homepage/create-icon.png" class="create-button-icon">
-        </button>
-      </a>
+      ${generateCreateButtonHTML()}
 
       <a href=../html/profile.html>
         <img src="../${currentUser.profilePicturePath}" class="profile-button-icon">
@@ -50,6 +46,11 @@ export function generateHeaderHTML() {
     .addEventListener('focusout', event => {
       renderSearchbarDropdown(event);
     });
+  
+  if (window.location.pathname === '/html/my-videos.html') {
+    document.querySelector('.js-create-button')
+      .addEventListener('click', toggleUploadWindow);
+  }
 }
 
 
@@ -83,4 +84,22 @@ function renderSearchbarDropdown(event) {
 
   searchbarDropdown.innerHTML = dropdownHTML;
   searchbarDropdown.classList.remove('closed');
+}
+
+
+/* Generates the HTML for the create button */
+function generateCreateButtonHTML() {
+  let createButtonHTML = 
+  `
+    <button class="create-button button-gray-to-white js-create-button">
+      Create
+      <img src="../icons/homepage/create-icon.png" class="create-button-icon">
+    </button>
+  `;
+
+  if (window.location.pathname !== '/html/my-videos.html') {
+    createButtonHTML = ` <a href="../html/my-videos.html"> ${createButtonHTML} </a>`; 
+  }
+
+  return createButtonHTML;
 }

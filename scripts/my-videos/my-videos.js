@@ -14,16 +14,31 @@ if (!currentUser) {
 generateVideoRowsHTML();
 generateSidebarHTML();
 generateHeaderHTML();
-
-
-/* --- Event listeners --- */
-
-// Event listener for the check all checkbox
-document.querySelector('.js-select-all-checkbox')
-  .addEventListener('change', checkAllBoxes);
+generateUploadWindowHTML();
 
 
 /* --- Functions --- */
+
+/* Toggles visibility of the upload window */
+export function toggleUploadWindow() {
+  document.querySelector('.js-upload-window-container')
+    .classList.toggle('closed');
+}
+
+
+/* Generates the HTML for the upload window */
+function generateUploadWindowHTML() {
+  document.querySelector('.js-upload-window-container')
+    .addEventListener('click', function(e) {
+      if (e.target === this) {
+        toggleUploadWindow();
+      }
+    });
+
+  document.querySelector('.js-upload-window-exit-button')
+    .addEventListener('click', toggleUploadWindow);
+}
+
 
 /* Function to run when the check all checkbox is clicked */
 function checkAllBoxes() {
@@ -80,6 +95,10 @@ function generateVideoRowsHTML() {
   document.querySelector('.js-video-grid')
     .innerHTML = videoRowsHTML;
   
+  // Event listener for the check all checkbox
+  document.querySelector('.js-select-all-checkbox')
+  .addEventListener('change', checkAllBoxes);
+
   // Event listener for regular checkboxes
   document.querySelectorAll('.js-select-video-checkbox')
   .forEach((checkbox) => {
