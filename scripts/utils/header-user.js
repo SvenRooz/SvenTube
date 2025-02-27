@@ -1,7 +1,6 @@
 import { currentUser } from "../../data/usersData.js";
 import { videos } from "../../data/videosData.js";
 import { stringIncludes } from "./strings.js";
-import { toggleUploadWindow } from "../my-videos/my-videos.js";
 
 /* Generates the header for the user specific pages */
 export function generateHeaderHTML() {
@@ -102,4 +101,11 @@ function generateCreateButtonHTML() {
   }
 
   return createButtonHTML;
+}
+
+
+/* Toggles visibility of the upload window */
+export function toggleUploadWindow() {
+  document.querySelector('.js-upload-window-container')
+    .classList.toggle('closed');
 }

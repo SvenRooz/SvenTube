@@ -3,6 +3,7 @@ import { currentUser } from '../../data/usersData.js';
 import { generateSidebarHTML } from '../utils/sidebar.js';
 import { formatTimeDDMMYYYY} from '../utils/time.js';
 import { generateHeaderHTML } from '../utils/header-user.js';
+import { generateUploadWindowHTML } from './opload-window.js';
 
 
 /* --- Running code --- */
@@ -18,26 +19,6 @@ generateUploadWindowHTML();
 
 
 /* --- Functions --- */
-
-/* Toggles visibility of the upload window */
-export function toggleUploadWindow() {
-  document.querySelector('.js-upload-window-container')
-    .classList.toggle('closed');
-}
-
-
-/* Generates the HTML for the upload window */
-function generateUploadWindowHTML() {
-  document.querySelector('.js-upload-window-container')
-    .addEventListener('click', function(e) {
-      if (e.target === this) {
-        toggleUploadWindow();
-      }
-    });
-
-  document.querySelector('.js-upload-window-exit-button')
-    .addEventListener('click', toggleUploadWindow);
-}
 
 
 /* Function to run when the check all checkbox is clicked */

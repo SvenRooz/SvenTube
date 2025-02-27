@@ -6,6 +6,7 @@
 	--text-color-white: rgb(235, 235, 235);
 	--text-color-lightgrey: rgb(201, 201, 201);
 	--text-color-black : rgb(24, 24, 24);
+  --text-color-red: rgb(255, 72, 72);
 
 	--transition-02: all 0.2s;
   --transition-03: all 0.3s;
@@ -101,6 +102,11 @@
 .upload-window-area-upload-icon {
   width: 70px;
   filter: invert(0.5);
+}
+
+.upload-window-file-error-text {
+  color: var(--text-color-red);
+  font-size: 14px;
 }
 
 .upload-window-area-text {
